@@ -39,7 +39,7 @@
       --radius: 10px;
       --transition: 0.3s ease;
       --navbar-height: 70px;
-      --hero-gradient: linear-gradient(135deg, #34b6ea 0%, #1bb5e8 100%);
+      --hero-gradient: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
     }
 
     /* Dark mode — toggled via class on <html> */
@@ -278,6 +278,16 @@
       border: 2px solid rgba(255,255,255,0.7);
     }
     .btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+    .btn--primary:hover {
+      background: #f0f9ff;
+      color: #1d4ed8;
+      box-shadow: 0 8px 24px rgba(37,99,235,0.35);
+    }
+    .btn--outline:hover {
+      background: rgba(255,255,255,0.22);
+      border-color: white;
+      box-shadow: 0 8px 24px rgba(255,255,255,0.2);
+    }
 
     /* =============================================
        TASKS OVERVIEW — links all 5 internship tasks
@@ -385,9 +395,14 @@
     .skill-card:hover {
       transform: translateY(-6px);
       box-shadow: var(--shadow-md);
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
+      border-color: transparent;
     }
+    .skill-card:hover h3 { color: white; }
+    .skill-card:hover .skill-card__icon { filter: brightness(1.3); transform: scale(1.2); }
+    .skill-card__icon { transition: transform 0.3s ease, filter 0.3s ease; }
     .skill-card__icon { font-size: 2rem; margin-bottom: 10px; }
-    .skill-card h3 { font-size: 0.95rem; color: var(--color-secondary); }
+    .skill-card h3 { font-size: 0.95rem; color: var(--color-secondary); transition: color 0.3s ease; }
 
     /* =============================================
        TASK 2 — Services Grid
@@ -408,7 +423,15 @@
     .services__card:hover {
       transform: translateY(-4px);
       box-shadow: var(--shadow-md);
+      background: linear-gradient(135deg, #0ea5e9, #10b981);
+      border-color: transparent;
     }
+    .services__card:hover h3,
+    .services__card:hover p { color: white; }
+    .services__card:hover .services__icon { transform: scale(1.2); }
+    .services__icon { transition: transform 0.3s ease; }
+    .services__card h3,
+    .services__card p { transition: color 0.3s ease; }
     .services__icon { font-size: 2.5rem; margin-bottom: 16px; }
     .services__card h3 {
       font-family: var(--font-heading);
@@ -665,7 +688,7 @@
        ============================================================ -->
   <header>
     <nav class="navbar" aria-label="Main navigation">
-      <a href="#home" class="navbar__logo">Apex<span>Planet</span></a>
+      <a href="#home" class="navbar__logo">MyPort<span>folio</span></a>
 
       <ul class="navbar__links">
         <li><a href="#home">Home</a></li>
@@ -700,11 +723,11 @@
          TASK 1 — Hero Section
          ============================================================ -->
     <section class="hero" id="home">
-      <span class="hero__badge">45-Day Web Development Internship</span>
+      <span class="hero__badge"> Web Development Intern</span>
       <h1 class="hero__title">Hi, I'm a Future Developer</h1>
       <h2 class="hero__subtitle">Building the Web, One Line at a Time</h2>
       <p class="hero__text">
-        Welcome to my unified internship portfolio! All 5 tasks live on this single page —
+        Welcome to my unified internship portfolio! Live on this single page —
         scroll down or use the navbar to explore each section.
       </p>
       <div class="hero__buttons">
