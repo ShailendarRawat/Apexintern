@@ -1,0 +1,5 @@
+# API keys and local secrets — never commit
+config.js
+
+# OS files
+.DS_Store
